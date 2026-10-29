@@ -63,7 +63,7 @@ export function validateUploaderName(name: string): { valid: boolean; error?: st
     return { valid: true, sanitized: sanitizeInput(validated.uploaderName) }
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return { valid: false, error: error.errors[0].message }
+      return { valid: false, error: error.issues[0].message }
     }
     return { valid: false, error: 'Invalid input' }
   }
@@ -80,7 +80,7 @@ export function validateGuestTag(tag: string | null | undefined): { valid: boole
     return { valid: true, sanitized: validated.guestTag ? sanitizeInput(validated.guestTag, 50) : null }
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return { valid: false, error: error.errors[0].message }
+      return { valid: false, error: error.issues[0].message }
     }
     return { valid: false, error: 'Invalid tag' }
   }
@@ -93,7 +93,7 @@ export function validateAdminPassword(password: string): { valid: boolean; error
     return { valid: true }
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return { valid: false, error: error.errors[0].message }
+      return { valid: false, error: error.issues[0].message }
     }
     return { valid: false, error: 'Invalid password' }
   }
