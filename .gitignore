@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Next.js / build output
+.next/
+out/
+tsconfig.tsbuildinfo
+next-env.d.ts
+
+# Environment files: never commit real values
+.env
+.env*
+
+# Vercel
+.vercel/
+
+# OS
+.DS_Store
