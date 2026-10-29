@@ -49,7 +49,7 @@ Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS 4 · Supabase 
 You'll need Node.js 18 or newer and a Supabase project (the free tier is enough).
 
 ```bash
-git clone https://github.com/DataByOlabiyi/wedding-photo-sharing.git
+git clone https://github.com/olabiyi-olaleye/wedding-photo-sharing.git
 cd wedding-photo-sharing
 npm install
 ```
